@@ -4,6 +4,8 @@ import WithChildren from '../../lib/interfaces/WithChildren';
 import { sansSerifBold } from '../../styles/FontStyles';
 
 const Wrapper = styled.a`
+  display: inline-block;
+
   background: var(--color-blue);
   color: var(--color-white);
   cursor: pointer;

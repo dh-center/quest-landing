@@ -27,7 +27,7 @@ const TextBlock = styled.div`
 
 const Description = styled.p`
   margin-top: 0;
-  margin-bottom: 67.2px;
+  margin-bottom: 50px;
 `;
 
 const PhoneWrapperRight = styled.div`
