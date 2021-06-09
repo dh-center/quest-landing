@@ -9,6 +9,7 @@ const Wrapper = styled.header`
   align-items: center;
 
   height: 96px;
+  min-width: 1160px;
   width: 100%;
 
   border-bottom: 2px solid var(--color-border-gray);

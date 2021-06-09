@@ -9,7 +9,9 @@ const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+
   width: 100%;
+  min-width: 1160px;
 `;
 
 interface SectionProps extends WithClassName, WithChildren, WithId {}
