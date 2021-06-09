@@ -3,6 +3,7 @@ import Section from '../components/lib/Section';
 import styled from 'styled-components';
 import { sansSerifBold } from '../styles/FontStyles';
 import Button from '../components/lib/Button';
+import WithId from '../lib/interfaces/WithId';
 
 const StyledSection = styled(Section)`
   padding: 65px 100px 180px;
@@ -41,12 +42,16 @@ const PhoneWrapperRight = styled.div`
   margin-left: auto;
 `;
 
+interface MainProps extends WithId {}
+
 /**
+ * Main section component
  *
+ * @param props - props of component
  */
-export default function Main(): ReactElement {
+export default function Main(props: MainProps): ReactElement {
   return (
-    <StyledSection>
+    <StyledSection id={props.id}>
       <Background src='/images/backgrounds/main-section.svg'/>
       <TextBlock>
         <Header>

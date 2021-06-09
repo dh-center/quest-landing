@@ -3,6 +3,7 @@ import WithClassName from '../../../lib/interfaces/WithClassName';
 import WithChildren from '../../../lib/interfaces/WithChildren';
 import Container from '../Container';
 import styled from 'styled-components';
+import WithId from '../../../lib/interfaces/WithId';
 
 const Wrapper = styled.section`
   display: flex;
@@ -10,7 +11,7 @@ const Wrapper = styled.section`
   align-items: center;
 `;
 
-interface SectionProps extends WithClassName, WithChildren {}
+interface SectionProps extends WithClassName, WithChildren, WithId {}
 
 /**
  * Section wrapper component
@@ -19,7 +20,7 @@ interface SectionProps extends WithClassName, WithChildren {}
  */
 export default function Section(props: SectionProps): ReactElement {
   return (
-    <Wrapper>
+    <Wrapper id={props.id}>
       <Container className={props.className}>
         { props.children }
       </Container>

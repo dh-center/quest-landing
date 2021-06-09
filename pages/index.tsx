@@ -28,7 +28,7 @@ export default function Home(): ReactElement {
 
       <Header/>
 
-      <Main/>
+      <Main id='about'/>
       <Advantages/>
     </Container>
   );
