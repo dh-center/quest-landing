@@ -3,7 +3,6 @@ import Section from '../components/lib/Section';
 import styled from 'styled-components';
 import { sansSerifBold } from '../styles/FontStyles';
 import Button from '../components/lib/Button';
-import Image from 'next/image';
 
 const StyledSection = styled(Section)`
   padding: 65px 100px 180px;
@@ -51,7 +50,7 @@ export default function Main(): ReactElement {
   return (
     <StyledSection>
       <BackgroundWrapper>
-        <Image src='/images/backgrounds/main-section.svg' layout='fill' objectFit='cover' objectPosition='center'/>
+        <img src='/images/backgrounds/main-section.svg' />
       </BackgroundWrapper>
       <TextBlock>
         <Header>
@@ -63,7 +62,7 @@ export default function Main(): ReactElement {
         <Button href='https://github.com/dh-center/quest'>Скачать</Button>
       </TextBlock>
       <PhoneWrapperRight>
-        <Image src='/images/screenshots/quest-catalog.svg' width={260} height={561.15} objectFit='cover'/>
+        <img src='/images/screenshots/quest-catalog.svg' width={260} height={561.15}/>
       </PhoneWrapperRight>
     </StyledSection>
   );
