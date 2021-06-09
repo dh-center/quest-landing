@@ -55,7 +55,7 @@ const CardName = styled.div`
 `;
 
 /**
- *
+ * Persons section component
  */
 export default function PersonCards(): ReactElement {
   const persons = [
