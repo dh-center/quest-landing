@@ -13,8 +13,11 @@ const Wrapper = styled.header`
   width: 100%;
 
   border-bottom: 2px solid var(--color-border-gray);
+  background: var(--color-white);
+  z-index: 1;
 
   position: fixed;
+  margin-top: -96px;
 `;
 
 const NavBarRight = styled(NavBar)`
