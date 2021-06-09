@@ -18,6 +18,8 @@ const BackgroundWrapper = styled.div`
   top: 126px;
   left: 50%;
   transform: translateX(-50%);
+
+  z-index: -1;
 `;
 
 const TextBlock = styled.div`
