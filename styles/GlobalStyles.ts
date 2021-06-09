@@ -13,6 +13,7 @@ const GlobalStyles = createGlobalStyle`
     ${ sansSerifRegular };
     color: var(--color-black);
     font-size: 24px;
+    line-height: 1.2;
 
     margin: 0;
     -webkit-font-smoothing: antialiased;

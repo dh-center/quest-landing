@@ -3,6 +3,7 @@ import { ReactElement } from 'react';
 import Header from '../components/Header';
 import styled from 'styled-components';
 import Main from '../sections/Main';
+import Advantages from '../sections/Advantages';
 
 const Container = styled.div`
   width: 100vw;
@@ -28,6 +29,7 @@ export default function Home(): ReactElement {
       <Header/>
 
       <Main/>
+      <Advantages/>
     </Container>
   );
 }

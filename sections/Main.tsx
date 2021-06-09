@@ -31,7 +31,6 @@ const TextBlock = styled.div`
 const Header = styled.h1`
   ${ sansSerifBold };
   font-size: 48px;
-  line-height: 120%;
   margin-top: 0;
   margin-bottom: 30px;
 `;
