@@ -24,11 +24,6 @@ const GlobalStyles = createGlobalStyle`
   *, *::after, *::before {
     box-sizing: border-box;
   }
-
-  section[id] {
-    margin-top: -96px;
-    padding-top: 96px;
-  }
 `;
 
 export default GlobalStyles;

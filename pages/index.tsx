@@ -6,7 +6,8 @@ import Main from '../sections/Main';
 import Advantages from '../sections/Advantages';
 import QuestsAndQuizzes from '../sections/QuestsAndQuizzes';
 import AchievementsAndFriends from '../sections/AchievementsAndFriends';
-import PersonCards from "../sections/PersonCards";
+import PersonCards from '../sections/PersonCards';
+import Download from '../sections/Download';
 
 const Container = styled.div`
   width: 100vw;
@@ -36,6 +37,8 @@ export default function Home(): ReactElement {
       <QuestsAndQuizzes/>
       <AchievementsAndFriends/>
       <PersonCards/>
+
+      <Download id='download'/>
     </Container>
   );
 }
