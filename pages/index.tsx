@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import styled from 'styled-components';
 import Main from '../sections/Main';
 import Advantages from '../sections/Advantages';
+import QuestsAndQuizzes from "../sections/QuestsAndQuizzes";
 
 const Container = styled.div`
   width: 100vw;
@@ -30,6 +31,7 @@ export default function Home(): ReactElement {
 
       <Main id='about'/>
       <Advantages/>
+      <QuestsAndQuizzes/>
     </Container>
   );
 }

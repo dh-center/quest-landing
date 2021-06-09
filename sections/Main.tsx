@@ -1,9 +1,9 @@
 import { ReactElement } from 'react';
 import Section from '../components/lib/Section';
 import styled from 'styled-components';
-import { sansSerifBold } from '../styles/FontStyles';
 import Button from '../components/lib/Button';
 import WithId from '../lib/interfaces/WithId';
+import Title from '../components/lib/Title';
 
 const StyledSection = styled(Section)`
   padding: 65px 100px 180px;
@@ -23,13 +23,6 @@ const Background = styled.img`
 const TextBlock = styled.div`
   display: inline-block;
   width: 410px;
-`;
-
-const Header = styled.h1`
-  ${ sansSerifBold };
-  font-size: 48px;
-  margin-top: 0;
-  margin-bottom: 30px;
 `;
 
 const Description = styled.p`
@@ -54,9 +47,9 @@ export default function Main(props: MainProps): ReactElement {
     <StyledSection id={props.id}>
       <Background src='/images/backgrounds/main-section.svg'/>
       <TextBlock>
-        <Header>
+        <Title>
           Изучай историю Санкт-Петербурга вместе с Que.St
-        </Header>
+        </Title>
         <Description>
           Интерактивные культурные маршруты по Санкт-Петербургу с игровыми элементами
         </Description>
