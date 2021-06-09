@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next build && next export",
     "start": "next start",
     "lint": "eslint . --ext .js --ext .ts --ext .tsx --fix",
     "lint:test": "eslint . --ext .js --ext .ts --ext .tsx --max-warnings 0"
