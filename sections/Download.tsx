@@ -22,6 +22,7 @@ const DownloadButtonsWrapper = styled.div`
   img {
     height: 80px;
     margin-left: 40px;
+    cursor: pointer;
 
     &:first-child {
       margin-left: 0;
