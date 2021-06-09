@@ -56,7 +56,7 @@ export default function Main(props: MainProps): ReactElement {
         <Button href='https://github.com/dh-center/quest'>Скачать</Button>
       </TextBlock>
       <PhoneWrapperRight>
-        <img src='/images/screenshots/quest-catalog.svg' alt='Скриншот раздела «Каталог квестов»'/>
+        <img src='/images/screenshots/quest-catalog.png' alt='Скриншот раздела «Каталог квестов»'/>
       </PhoneWrapperRight>
     </StyledSection>
   );
