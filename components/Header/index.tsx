@@ -1,7 +1,6 @@
 import { ReactElement } from 'react';
 import styled from 'styled-components';
 import ContainerWithVerticalAlign from '../lib/ContainerWithVerticalAlign';
-import Image from 'next/image';
 import NavBar from './NavBar';
 
 const Wrapper = styled.header`
@@ -20,6 +19,11 @@ const Wrapper = styled.header`
   margin-top: -96px;
 `;
 
+const Logo = styled.img`
+  width: 100px;
+  height: 56px;
+`;
+
 const NavBarRight = styled(NavBar)`
   margin-left: auto;
 `;
@@ -31,7 +35,7 @@ export default function Header(): ReactElement {
   return (
     <Wrapper>
       <ContainerWithVerticalAlign>
-        <Image src='/images/quest-icon.svg' alt='Que.St logo' width='100' height='56'/>
+        <Logo src='/images/quest-icon.svg' alt='Логотип Que.St'/>
         <NavBarRight/>
       </ContainerWithVerticalAlign>
     </Wrapper>
