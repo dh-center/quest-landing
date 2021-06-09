@@ -3,7 +3,6 @@ import Section from '../components/lib/Section';
 import styled from 'styled-components';
 import { sansSerifBold } from '../styles/FontStyles';
 import Button from '../components/lib/Button';
-import Image from 'next/image';
 
 const StyledSection = styled(Section)`
   padding: 65px 100px 180px;
@@ -11,10 +10,7 @@ const StyledSection = styled(Section)`
   position: relative;
 `;
 
-const BackgroundWrapper = styled.div`
-  width: 1727px;
-  height: 653px;
-
+const Background = styled.img`
   position: absolute;
   top: 126px;
   left: 50%;
@@ -51,9 +47,7 @@ const PhoneWrapperRight = styled.div`
 export default function Main(): ReactElement {
   return (
     <StyledSection>
-      <BackgroundWrapper>
-        <Image src='/images/backgrounds/main-section.svg' layout='fill' objectFit='cover' objectPosition='center'/>
-      </BackgroundWrapper>
+      <Background src='/images/backgrounds/main-section.svg'/>
       <TextBlock>
         <Header>
           Изучай историю Санкт-Петербурга вместе с Que.St
@@ -64,7 +58,7 @@ export default function Main(): ReactElement {
         <Button href='https://github.com/dh-center/quest'>Скачать</Button>
       </TextBlock>
       <PhoneWrapperRight>
-        <Image src='/images/screenshots/quest-catalog.svg' width={260} height={561.15} objectFit='cover'/>
+        <img src='/images/screenshots/quest-catalog.svg' alt='Скриншот раздела «Каталог квестов»'/>
       </PhoneWrapperRight>
     </StyledSection>
   );
