@@ -26,9 +26,12 @@ const Description = styled.p`
 `;
 
 const Phone = styled.img`
-  margin-top: 65px;
-  margin-left: auto;
-  margin-bottom: 100px;
+  width: 270px;
+  height: 570px;
+
+  margin: 65px 95px 175px auto;
+
+  filter: var(--shadow-filter-medium);
 `;
 
 interface MainProps extends WithId {}
