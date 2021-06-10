@@ -1,15 +1,10 @@
 import { ReactElement } from 'react';
 import styled from 'styled-components';
-import ContainerWithVerticalAlign from '../lib/ContainerWithVerticalAlign';
 import NavBar from './NavBar';
+import Container from '../lib/Container';
 
 const Wrapper = styled.header`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
   height: 96px;
-  min-width: 1160px;
   width: 100%;
 
   border-bottom: 2px solid var(--color-border-gray);
@@ -18,6 +13,11 @@ const Wrapper = styled.header`
 
   position: fixed;
   margin-top: -96px;
+`;
+
+const ContainerWithVerticalAlign = styled(Container)`
+  display: flex;
+  align-items: center;
 `;
 
 const Logo = styled.img`
