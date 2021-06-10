@@ -5,7 +5,7 @@ import Container from '../lib/Container';
 
 const Wrapper = styled.header`
   height: 96px;
-  width: 100%;
+  width: inherit;
 
   border-bottom: 2px solid var(--color-border-gray);
   background: var(--color-white);
@@ -16,7 +16,6 @@ const Wrapper = styled.header`
 `;
 
 const ContainerWithVerticalAlign = styled(Container)`
-  display: flex;
   align-items: center;
 `;
 
