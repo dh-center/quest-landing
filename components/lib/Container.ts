@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export default styled.div`
+const Container = styled.div`
   height: 100%;
   max-width: 1160px;
 
@@ -8,3 +8,5 @@ export default styled.div`
 
   display: flex;
 `;
+
+export default Container;

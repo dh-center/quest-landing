@@ -1,8 +1,14 @@
 import { ReactElement } from 'react';
-import SectionGray from '../components/lib/Section/SectionGray';
 import styled from 'styled-components';
+import Section from '../components/lib/Section';
+import Container from '../components/lib/Container';
 
-const StyledSectionGray = styled(SectionGray)`
+const StyledSectionGray = styled(Section)`
+  background: var(--color-background-gray);
+`;
+
+const AdvantagesWrapper = styled.div`
+  width: 100%;
   padding: 120px 0;
 
   display: grid;
@@ -36,24 +42,28 @@ const AdvantageImage = styled.div`
 export default function Advantages(): ReactElement {
   return (
     <StyledSectionGray>
-      <AdvantageItem>
-        <AdvantageImage>
-          <img src='/images/advantages/library.svg' alt='Книга'/>
-        </AdvantageImage>
-        Библиотека маршрутов<br/>по разным тематикам
-      </AdvantageItem>
-      <AdvantageItem>
-        <AdvantageImage>
-          <img src='/images/advantages/content.svg' alt='Кубок'/>
-        </AdvantageImage>
-        Премиальный контент,<br/>награды и достижения
-      </AdvantageItem>
-      <AdvantageItem>
-        <AdvantageImage>
-          <img src='/images/advantages/free.svg' alt='Подарок'/>
-        </AdvantageImage>
-        Бесплатно,<br/>без рекламы
-      </AdvantageItem>
+      <Container>
+        <AdvantagesWrapper>
+          <AdvantageItem>
+            <AdvantageImage>
+              <img src='/images/advantages/library.svg' alt='Книга'/>
+            </AdvantageImage>
+            Библиотека маршрутов<br/>по разным тематикам
+          </AdvantageItem>
+          <AdvantageItem>
+            <AdvantageImage>
+              <img src='/images/advantages/content.svg' alt='Кубок'/>
+            </AdvantageImage>
+            Премиальный контент,<br/>награды и достижения
+          </AdvantageItem>
+          <AdvantageItem>
+            <AdvantageImage>
+              <img src='/images/advantages/free.svg' alt='Подарок'/>
+            </AdvantageImage>
+            Бесплатно,<br/>без рекламы
+          </AdvantageItem>
+        </AdvantagesWrapper>
+      </Container>
     </StyledSectionGray>
   );
 }
