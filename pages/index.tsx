@@ -24,6 +24,7 @@ export default function Home(): ReactElement {
   return (
     <Container>
       <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Que.St</title>
         <meta name="description" content="🎮 Исследуй город играя!" />
         <link rel="icon" href="/favicon.ico" />
