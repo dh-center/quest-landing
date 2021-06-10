@@ -1,5 +1,5 @@
 import { ReactElement } from 'react';
-import styled, {keyframes} from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { sansSerifRegular } from '../styles/FontStyles';
 import Section from '../components/lib/Section';
 
@@ -49,6 +49,7 @@ const PersonCard = styled.li`
   background: var(--color-white);
   border-radius: 15px;
   border: 0.2px solid #E0E0E0;
+  filter: var(--shadow-filter-light);
 
   margin-right: 40px;
 

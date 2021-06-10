@@ -8,6 +8,7 @@ import QuestsAndQuizzes from '../sections/QuestsAndQuizzes';
 import AchievementsAndFriends from '../sections/AchievementsAndFriends';
 import PersonCards from '../sections/PersonCards';
 import Download from '../sections/Download';
+import Footer from '../components/Footer';
 
 const Container = styled.div`
   width: 100vw;
@@ -39,6 +40,8 @@ export default function Home(): ReactElement {
       <PersonCards/>
 
       <Download id='download'/>
+
+      <Footer id='contacts'/>
     </Container>
   );
 }
