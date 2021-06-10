@@ -23,6 +23,7 @@ const DownloadButtonsWrapper = styled.div`
     height: 80px;
     margin-left: 40px;
     cursor: pointer;
+    filter: var(--shadow-filter-light);
 
     &:first-child {
       margin-left: 0;
@@ -42,7 +43,7 @@ export default function Download(props: DownloadProps): ReactElement {
     <StyledSectionGray id={props.id}>
       <StyledTitle>Скачать приложение</StyledTitle>
       <DownloadButtonsWrapper>
-        <img src="/images/app-store-badge.png" alt="Загрузите в App Store"/>
+        <img src="/images/app-store-badge.svg" alt="Загрузите в App Store"/>
         <img src="/images/google-play-badge.png" alt="Доступно в Google Play"/>
       </DownloadButtonsWrapper>
     </StyledSectionGray>
