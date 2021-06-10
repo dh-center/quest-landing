@@ -1,5 +1,5 @@
 import { ReactElement } from 'react';
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
 import { sansSerifRegular } from '../styles/FontStyles';
 import Section from '../components/lib/Section';
 
@@ -18,6 +18,18 @@ const Title = styled.h2`
   margin: 0 0 87px;
 `;
 
+const fromLeftToRight = keyframes`
+  0% {
+    transform: translateX(-5%);
+  }
+  50% {
+    transform: translateX(-95%);
+  }
+  100% {
+    transform: translateX(-5%);
+  }
+`;
+
 const PersonCardsWrapper = styled.ul`
   display: flex;
 
@@ -25,7 +37,9 @@ const PersonCardsWrapper = styled.ul`
   padding: 0;
   list-style: none;
 
-  overflow-x: hidden;
+  overflow-x: visible;
+
+  animation: ${fromLeftToRight} 25s ease-in-out infinite;
 `;
 
 const PersonCard = styled.li`
@@ -39,6 +53,10 @@ const PersonCard = styled.li`
   margin-right: 40px;
 
   overflow: hidden;
+
+  &:last-child {
+    margin-right: 0;
+  }
 `;
 
 const CardImage = styled.img`
@@ -61,69 +79,84 @@ export default function PersonCards(): ReactElement {
     {
       firstName: 'Пётр',
       lastName: 'Чайковский',
+      photo: 'chaykovsky.png',
     },
     {
       firstName: 'Сергей',
       lastName: 'Дягилев',
+      photo: 'dyagelev.png',
     },
     {
       firstName: 'Анна',
       lastName: 'Павлова',
+      photo: 'pavlova.png',
     },
     {
       firstName: 'Виссарион',
       lastName: 'Белинский',
+      photo: 'belinsky.png',
     },
     {
       firstName: 'Александр',
       lastName: 'Пушкин',
+      photo: 'pushkin.png',
     },
     {
       firstName: 'Сергей',
       lastName: 'Довлатов',
+      photo: 'dovlatov.png',
     },
     {
       firstName: 'Илья',
       lastName: 'Репин',
+      photo: 'repin.png',
     },
     {
       firstName: 'Казимир',
       lastName: 'Малевич',
+      photo: 'malevich.png',
     },
     {
       firstName: 'Михаил',
       lastName: 'Врубель',
+      photo: 'vrubel.png',
     },
     {
       firstName: 'Анна',
       lastName: 'Ахматова',
+      photo: 'ahmatova.png',
     },
     {
       firstName: 'Алексей',
       lastName: 'Балабанов',
+      photo: 'balabanov.png',
     },
     {
       firstName: 'Павел',
       lastName: 'Сюзор',
+      photo: 'syuzor.png',
     },
     {
       firstName: 'Карл',
       lastName: 'Росси',
+      photo: 'rossi.png',
     },
     {
       firstName: 'Фёдор',
       lastName: 'Достоевский',
+      photo: 'dostoevsky.png',
     },
     {
       firstName: 'Герберт',
       lastName: 'Уэлльс',
+      photo: 'uelss.png',
     },
   ];
 
   const personCards = persons.map((person, index) => {
     return (
       <PersonCard key={index}>
-        <CardImage/>
+        <CardImage src={`/images/persons/${person.photo}`}/>
         <CardName>{person.firstName}<br/>{person.lastName}</CardName>
       </PersonCard>
     );
