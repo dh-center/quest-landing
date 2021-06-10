@@ -1,18 +1,14 @@
 import { ReactElement } from 'react';
 import styled from 'styled-components';
 import { sansSerifRegular } from '../styles/FontStyles';
+import Section from '../components/lib/Section';
 
-const Wrapper = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  width: 100%;
-  min-width: 1160px;
-  height: 593px;
-
+const StyledSection = styled(Section)`
   background-image: url('/images/backgrounds/persons-section.svg');
-  background-position: center 0;
+  background-position: center 110px;
+  background-repeat: no-repeat;
+
+  padding: 110px 0 140px;
 `;
 
 const Title = styled.h2`
@@ -28,9 +24,12 @@ const PersonCardsWrapper = styled.ul`
   margin: 0;
   padding: 0;
   list-style: none;
+
+  overflow-x: hidden;
 `;
 
 const PersonCard = styled.li`
+  flex-shrink: 0;
   width: 168px;
 
   background: var(--color-white);
@@ -131,11 +130,11 @@ export default function PersonCards(): ReactElement {
   });
 
   return (
-    <Wrapper>
+    <StyledSection>
       <Title>Собирай карточки<br/>с историческими персонами</Title>
       <PersonCardsWrapper>
         {personCards}
       </PersonCardsWrapper>
-    </Wrapper>
+    </StyledSection>
   );
 }
