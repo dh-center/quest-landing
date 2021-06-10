@@ -44,7 +44,7 @@ export default function Download(props: DownloadProps): ReactElement {
       <StyledTitle>Скачать приложение</StyledTitle>
       <DownloadButtonsWrapper>
         <img src="/images/app-store-badge.svg" alt="Загрузите в App Store"/>
-        <img src="/images/google-play-badge.png" alt="Доступно в Google Play"/>
+        <img src="/images/google-play-badge.svg" alt="Доступно в Google Play"/>
       </DownloadButtonsWrapper>
     </StyledSectionGray>
   );
