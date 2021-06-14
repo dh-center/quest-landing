@@ -1,15 +1,8 @@
-import Head from 'next/head';
 import { ReactElement } from 'react';
-import Header from '../components/Header';
 import styled from 'styled-components';
-import Main from '../sections/Main';
-import Advantages from '../sections/Advantages';
-import QuestsAndQuizzes from '../sections/QuestsAndQuizzes';
-import AchievementsAndFriends from '../sections/AchievementsAndFriends';
-import PersonCards from '../sections/PersonCards';
-import Download from '../sections/Download';
+import Head from 'next/head';
+import Header from '../components/Header';
 import Footer from '../components/Footer';
-import Partners from '../sections/Partners';
 
 const Container = styled.div`
   width: 100vw;
@@ -22,14 +15,14 @@ const Container = styled.div`
 `;
 
 /**
- * Main page
+ * Contacts page
  */
-export default function Home(): ReactElement {
+export default function Contacts(): ReactElement {
   return (
     <Container>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Que.St</title>
+        <title>Контакты - Que.St</title>
         <meta name="description" content="🎮 Исследуй город играя!" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.gstatic.com"/>
@@ -38,15 +31,7 @@ export default function Home(): ReactElement {
 
       <Header/>
 
-      <Main id='about'/>
-      <Advantages/>
-      <QuestsAndQuizzes/>
-      <AchievementsAndFriends/>
-      <PersonCards/>
-
-      <Download id='download'/>
-
-      <Partners/>
+      Контакты
 
       <Footer id='contacts'/>
     </Container>

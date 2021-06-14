@@ -41,7 +41,7 @@ export default function NavBar(props: NavBarProps): ReactElement {
           Партнёры
         </StyledLink>
       </Link>
-      <Link href='/#contacts'>
+      <Link href='/contacts'>
         <StyledLink>
           Контакты
         </StyledLink>

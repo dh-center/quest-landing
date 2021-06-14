@@ -11,6 +11,7 @@ const Wrapper = styled.footer`
   background-position: right top;
   background-size: cover;
 
+  margin-top: auto;
 `;
 
 const Left = styled.div`

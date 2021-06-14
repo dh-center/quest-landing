@@ -1,6 +1,7 @@
 import { ReactElement } from 'react';
 import styled from 'styled-components';
 import NavBar from './NavBar';
+import Link from 'next/link';
 import Container from '../lib/Container';
 
 const Wrapper = styled.header`
@@ -22,6 +23,7 @@ const ContainerWithVerticalAlign = styled(Container)`
 const Logo = styled.img`
   width: 100px;
   height: 56px;
+  cursor: pointer;
 `;
 
 const NavBarRight = styled(NavBar)`
@@ -35,7 +37,9 @@ export default function Header(): ReactElement {
   return (
     <Wrapper>
       <ContainerWithVerticalAlign>
-        <Logo src='/images/quest-icon.svg' alt='Логотип Que.St'/>
+        <Link href='/'>
+          <Logo src='/images/quest-icon.svg' alt='Логотип Que.St'/>
+        </Link>
         <NavBarRight/>
       </ContainerWithVerticalAlign>
     </Wrapper>
