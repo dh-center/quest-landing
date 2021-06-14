@@ -6,7 +6,11 @@ import Container from '../lib/Container';
 const Wrapper = styled.footer`
   height: 176px;
 
-  border-top: 6px solid var(--color-background-gray);
+  background-image: url('/images/backgrounds/footer.svg');
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: cover;
+
 `;
 
 const Left = styled.div`

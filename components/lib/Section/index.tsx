@@ -6,6 +6,8 @@ import WithId from '../../../lib/interfaces/WithId';
 
 const Wrapper = styled.section`
   width: 100%;
+
+  overflow-x: hidden;
 `;
 
 interface SectionProps extends WithClassName, WithChildren, WithId {}
