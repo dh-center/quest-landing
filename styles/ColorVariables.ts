@@ -11,7 +11,7 @@ const ColorVariables = createGlobalStyle`
 
     --color-border-gray: #EDF3F3;
 
-    --color-background-gray: linear-gradient(0deg, rgba(142, 178, 188, 0.1), rgba(142, 178, 188, 0.1)), #FFFFFF;
+    --color-background-gray: rgba(142, 178, 188, 0.1);
   }
 `;
 

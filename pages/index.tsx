@@ -9,6 +9,7 @@ import AchievementsAndFriends from '../sections/AchievementsAndFriends';
 import PersonCards from '../sections/PersonCards';
 import Download from '../sections/Download';
 import Footer from '../components/Footer';
+import Partners from '../sections/Partners';
 
 const Container = styled.div`
   width: 100vw;
@@ -41,6 +42,8 @@ export default function Home(): ReactElement {
       <PersonCards/>
 
       <Download id='download'/>
+
+      <Partners/>
 
       <Footer id='contacts'/>
     </Container>
