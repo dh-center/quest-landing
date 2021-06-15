@@ -2,6 +2,7 @@ import { ReactElement } from 'react';
 import styled from 'styled-components';
 import WithId from '../../lib/interfaces/WithId';
 import Container from '../lib/Container';
+import Link from 'next/link';
 
 const Wrapper = styled.footer`
   height: 176px;
@@ -14,20 +15,26 @@ const Wrapper = styled.footer`
   margin-top: auto;
 `;
 
+const StyledContainer = styled(Container)`
+  display: flex;
+  justify-content: space-between;
+`;
+
 const Left = styled.div`
   display: flex;
   align-items: center;
 
-  width: 50%;
-
   font-size: 16px;
+`;
+
+const Center = styled(Left)`
+  align-items: flex-end;
+  justify-content: center;
+  margin: 0 0 30px;
 `;
 
 const Right = styled(Left)`
   justify-content: flex-end;
-  align-items: flex-end;
-
-  width: 50%;
 `;
 
 const Contacts = styled.ul`
@@ -51,25 +58,29 @@ const ContactItem = styled.li`
   }
 `;
 
+const ContactItemLink = styled.a`
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--color-black);
+`;
+
 const Terms = styled.ul`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: flex-end;
 
+  height: 100%;
+
   list-style: none;
-  padding: 0;
-  margin: 0 0 30px;
+  padding: 30px 0;
 `;
 
-const TermsItem = styled.li`
-  margin-bottom: 17px;
+const TermsItem = styled.li``;
 
-  &:last-child {
-    margin-bottom: 0;
-  }
-`;
-
-const TermsItemBlue = styled(TermsItem)`
+const TermsItemLink = styled.a`
+  cursor: pointer;
+  text-decoration: none;
   color: var(--color-blue);
 `;
 
@@ -83,7 +94,7 @@ interface FooterProps extends WithId {}
 export default function Footer(props: FooterProps): ReactElement {
   return (
     <Wrapper id={props.id}>
-      <Container>
+      <StyledContainer>
         <Left>
           <Contacts>
             <ContactItem>
@@ -92,21 +103,47 @@ export default function Footer(props: FooterProps): ReactElement {
             </ContactItem>
             <ContactItem>
               <img src="/images/icons/mail.svg" alt="Письмо"/>
-              dh@itmo.ru
+              <ContactItemLink href='mailto:dh@itmo.ru' target='_blank'>
+                dh@itmo.ru
+              </ContactItemLink>
             </ContactItem>
             <ContactItem>
               <img src="/images/icons/globe.svg" alt="Глобус"/>
-              www.dh.itmo.ru
+              <ContactItemLink href='https://dh.itmo.ru' target='_blank'>
+                dh.itmo.ru
+              </ContactItemLink>
             </ContactItem>
           </Contacts>
         </Left>
+        <Center>
+          © 2021 Университет ИТМО
+        </Center>
         <Right>
           <Terms>
-            <TermsItemBlue>Политика конфидециальности</TermsItemBlue>
-            <TermsItem>© 2021 Университет ИТМО</TermsItem>
+            <TermsItem>
+              <Link href='/eula.pdf' target='_blank'>
+                <TermsItemLink>
+                  End-User License Agreement
+                </TermsItemLink>
+              </Link>
+            </TermsItem>
+            <TermsItem>
+              <Link href='/privacy-policy-en.pdf' target='_blank'>
+                <TermsItemLink>
+                  Privacy policy
+                </TermsItemLink>
+              </Link>
+            </TermsItem>
+            <TermsItem>
+              <Link href='/privacy-policy.pdf' target='_blank'>
+                <TermsItemLink>
+                  Политика конфиденциальности
+                </TermsItemLink>
+              </Link>
+            </TermsItem>
           </Terms>
         </Right>
-      </Container>
+      </StyledContainer>
     </Wrapper>
   );
 }
