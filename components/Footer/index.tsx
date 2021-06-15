@@ -121,21 +121,21 @@ export default function Footer(props: FooterProps): ReactElement {
         <Right>
           <Terms>
             <TermsItem>
-              <Link href='/eula.pdf' target='_blank'>
+              <Link href='/eula.pdf'>
                 <TermsItemLink>
                   End-User License Agreement
                 </TermsItemLink>
               </Link>
             </TermsItem>
             <TermsItem>
-              <Link href='/privacy-policy-en.pdf' target='_blank'>
+              <Link href='/privacy-policy-en.pdf'>
                 <TermsItemLink>
                   Privacy policy
                 </TermsItemLink>
               </Link>
             </TermsItem>
             <TermsItem>
-              <Link href='/privacy-policy.pdf' target='_blank'>
+              <Link href='/privacy-policy.pdf'>
                 <TermsItemLink>
                   Политика конфиденциальности
                 </TermsItemLink>
