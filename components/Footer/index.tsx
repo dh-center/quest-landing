@@ -116,7 +116,7 @@ export default function Footer(props: FooterProps): ReactElement {
           </Contacts>
         </Left>
         <Center>
-          © 2021 Университет ИТМО
+          © 2021 DH Center
         </Center>
         <Right>
           <Terms>
