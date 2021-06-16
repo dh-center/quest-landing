@@ -10,6 +10,10 @@ const StyledContainer = styled(Container)`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media(max-width: 425px) {
+    padding: 80px 0;
+  }
 `;
 
 const StyledTitle = styled(Title)`
@@ -19,7 +23,7 @@ const StyledTitle = styled(Title)`
 const PartnersWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 `;
 
 const PartnerItem = styled.div`
@@ -29,6 +33,11 @@ const PartnerItem = styled.div`
 
   width: 300px;
   height: 200px;
+
+  @media(max-width: 425px) {
+    width: 150px;
+    height: 150px;
+  }
 
   img {
     max-width: 100%;

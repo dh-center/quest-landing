@@ -9,6 +9,10 @@ const StyledSection = styled(Section)`
   background-repeat: no-repeat;
 
   padding: 110px 0 140px;
+
+  @media(max-width: 425px) {
+    padding: 90px 0 80px;
+  }
 `;
 
 const Title = styled.h2`

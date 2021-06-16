@@ -4,7 +4,12 @@ import WithChildren from '../../lib/interfaces/WithChildren';
 import { sansSerifBold } from '../../styles/FontStyles';
 
 const Wrapper = styled.a`
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 60px;
+  width: 360px;
 
   background: var(--color-blue);
   color: var(--color-white);
@@ -12,10 +17,13 @@ const Wrapper = styled.a`
   text-decoration: none;
   border-radius: 15px;
 
-  padding: 16.8px 135px;
   ${ sansSerifBold };
 
   box-shadow: var(--shadow-blue);
+
+  @media(max-width: 425px) {
+    width: 100%;
+  }
 `;
 
 interface ButtonProps extends WithChildren {

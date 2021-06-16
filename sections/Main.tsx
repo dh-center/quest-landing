@@ -10,6 +10,10 @@ const SectionWithBackground = styled(Section)`
   background-image: url('/images/backgrounds/main-section.svg');
   background-position: center 126px;
   background-repeat: no-repeat;
+
+  @media(max-width: 425px) {
+    background-position: center 70px;
+  }
 `;
 
 const TextBlock = styled.div`
@@ -18,11 +22,21 @@ const TextBlock = styled.div`
 
   margin-top: 65px;
   margin-left: 100px;
+
+  @media(max-width: 425px) {
+    margin-top: 30px;
+    margin-left: 0;
+    margin-bottom: 80px;
+  }
 `;
 
 const Description = styled.p`
   margin-top: 0;
   margin-bottom: 50px;
+
+  @media(max-width: 425px) {
+    margin-bottom: 200px;
+  }
 `;
 
 const Phone = styled.img`
@@ -32,6 +46,10 @@ const Phone = styled.img`
   margin: 65px 95px 175px auto;
 
   filter: var(--shadow-filter-medium);
+
+  @media(max-width: 425px) {
+    display: none;
+  }
 `;
 
 interface MainProps extends WithId {}

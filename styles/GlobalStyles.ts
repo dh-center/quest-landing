@@ -19,6 +19,10 @@ const GlobalStyles = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
+
+    @media(max-width: 425px) {
+      font-size: 22px;
+    }
   }
 
   *, *::after, *::before {

@@ -7,10 +7,14 @@ import Container from '../components/lib/Container';
 
 const TextBlock = styled.div`
   display: inline-block;
-  width: 496px;
+  max-width: 496px;
 
   margin-top: 135px;
   margin-right: auto;
+
+  @media(max-width: 425px) {
+    margin-top: 80px;
+  }
 `;
 
 const StyledTitle = styled(Title)`
@@ -18,7 +22,7 @@ const StyledTitle = styled(Title)`
 `;
 
 const DescriptionParagraph = styled.p`
-  width: 460px;
+  max-width: 460px;
 
   margin-top: 0;
   margin-bottom: 1em;
@@ -26,6 +30,10 @@ const DescriptionParagraph = styled.p`
 
 const Phone = styled.img`
   margin-top: 135px;
+
+  @media(max-width: 425px) {
+    display: none;
+  }
 `;
 
 /**

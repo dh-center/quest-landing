@@ -28,6 +28,10 @@ const Logo = styled.img`
 
 const NavBarRight = styled(NavBar)`
   margin-left: auto;
+
+  @media(max-width: 425px) {
+    display: none;
+  }
 `;
 
 /**

@@ -6,6 +6,10 @@ import Container from '../components/lib/Container';
 
 const Phone = styled.img`
   margin-top: 135px;
+
+  @media(max-width: 425px) {
+    display: none;
+  }
 `;
 
 const TextBlock = styled.div`
@@ -14,6 +18,10 @@ const TextBlock = styled.div`
 
   margin-top: 135px;
   margin-left: auto;
+
+  @media(max-width: 425px) {
+    margin-top: 80px;
+  }
 `;
 
 const StyledTitle = styled(Title)`

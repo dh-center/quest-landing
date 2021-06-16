@@ -7,6 +7,10 @@ const Container = styled.div`
   margin: 0 auto;
 
   display: flex;
+
+  @media(max-width: 425px) {
+    max-width: 343px;
+  }
 `;
 
 export default Container;

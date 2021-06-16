@@ -10,6 +10,10 @@ const StyledSectionGray = styled(SectionGray)`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media(max-width: 425px) {
+    padding: 60px 0;
+  }
 `;
 
 const StyledTitle = styled(Title)`
@@ -18,15 +22,27 @@ const StyledTitle = styled(Title)`
 
 const DownloadButtonsWrapper = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  width: 550px;
+
+  @media(max-width: 425px) {
+    width: 240px;
+    height: 182px;
+  }
 
   img {
     height: 80px;
-    margin-left: 40px;
     cursor: pointer;
     filter: var(--shadow-filter-light);
 
-    &:first-child {
-      margin-left: 0;
+    @media(max-width: 425px) {
+      width: 100%;
+
+      &:last-child {
+        align-self: flex-end;
+      }
     }
   }
 `;

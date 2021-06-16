@@ -13,11 +13,22 @@ const Wrapper = styled.footer`
   background-size: cover;
 
   margin-top: auto;
+
+  @media(max-width: 425px) {
+    height: initial;
+    background: none;
+    border-top: 2px solid var(--color-border-gray);
+  }
 `;
 
 const StyledContainer = styled(Container)`
   display: flex;
   justify-content: space-between;
+
+  @media(max-width: 425px) {
+    padding: 40px 0;
+    flex-wrap: wrap;
+  }
 `;
 
 const Left = styled.div`
@@ -25,16 +36,30 @@ const Left = styled.div`
   align-items: center;
 
   font-size: 16px;
+
+  @media(max-width: 425px) {
+    margin-bottom: 40px;
+  }
 `;
 
 const Center = styled(Left)`
   align-items: flex-end;
   justify-content: center;
   margin: 0 0 30px;
+
+  @media(max-width: 425px) {
+    width: 100%;
+  }
 `;
 
 const Right = styled(Left)`
   justify-content: flex-end;
+  padding: 30px 0;
+
+  @media(max-width: 425px) {
+    margin-bottom: 0;
+    padding: 0;
+  }
 `;
 
 const Contacts = styled.ul`
@@ -73,7 +98,11 @@ const Terms = styled.ul`
   height: 100%;
 
   list-style: none;
-  padding: 30px 0;
+  padding: 0;
+
+  @media(max-width: 425px) {
+    align-items: flex-start;
+  }
 `;
 
 const TermsItem = styled.li``;

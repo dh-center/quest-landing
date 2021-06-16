@@ -11,8 +11,9 @@ const AdvantagesWrapper = styled.div`
   width: 100%;
   padding: 120px 0;
 
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 `;
 
 const AdvantageItem = styled.div`
@@ -21,6 +22,14 @@ const AdvantageItem = styled.div`
   align-items: center;
 
   text-align: center;
+
+  @media(max-width: 425px) {
+    margin-bottom: 45px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 `;
 
 const AdvantageImage = styled.div`
@@ -34,6 +43,16 @@ const AdvantageImage = styled.div`
   border-radius: 30px;
   background: var(--color-white);
   margin-bottom: 28px;
+
+  @media(max-width: 425px) {
+    height: 160px;
+    width: 160px;
+  }
+
+  img {
+    width: 70%;
+    height: 70%;
+  }
 `;
 
 /**
