@@ -14,6 +14,10 @@ const PageContainer = styled.div`
 
   display: flex;
   flex-direction: column;
+
+  @media(max-width: 425px) {
+    padding-top: 74px;
+  }
 `;
 
 const Content = styled.div`
@@ -30,10 +34,19 @@ const Title = styled.h1`
   ${ sansSerifBold };
   font-size: 48px;
   margin: 65px 0 40px;
+
+  @media(max-width: 425px) {
+    font-size: 36px;
+    margin: 30px 0;
+  }
 `;
 
 const Paragraph = styled.p`
   margin-top: 0;
+
+  @media(max-width: 425px) {
+    font-size: 18px;
+  }
 `;
 
 const Delimiter = styled.div`
@@ -41,12 +54,21 @@ const Delimiter = styled.div`
   width: 100%;
   background: var(--color-background-gray);
   margin: 40px 0;
+
+  @media(max-width: 425px) {
+    margin: 30px 0;
+  }
 `;
 
 const ContactsList = styled.ul`
-  padding: 0 0 40px;
-  margin: 0;
+  padding: 0;
+  margin: 0 0 40px;
   list-style: none;
+
+  @media(max-width: 425px) {
+    font-size: 18px;
+    margin: 0 0 30px;
+  }
 `;
 
 const ContactItem = styled.li`
@@ -111,7 +133,7 @@ export default function Contacts(): ReactElement {
           <ContactsList>
             <ContactItem>
               <img src="/images/icons/map-blue.svg" alt="Карта"/>
-              г. Санкт-Петербург, ул. Ломоносова, 9
+              Санкт-Петербург, ул. Ломоносова, 9
             </ContactItem>
             <ContactItem>
               <img src="/images/icons/mail-blue.svg" alt="Письмо"/>

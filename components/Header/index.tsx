@@ -14,6 +14,11 @@ const Wrapper = styled.header`
 
   position: fixed;
   margin-top: -96px;
+
+  @media(max-width: 425px) {
+    height: 74px;
+    margin-top: -74px;
+  }
 `;
 
 const ContainerWithVerticalAlign = styled(Container)`

@@ -19,6 +19,10 @@ const Container = styled.div`
 
   display: flex;
   flex-direction: column;
+
+  @media(max-width: 425px) {
+    padding-top: 74px;
+  }
 `;
 
 /**
