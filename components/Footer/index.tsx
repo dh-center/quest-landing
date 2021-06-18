@@ -45,10 +45,12 @@ const Left = styled.div`
 const Center = styled(Left)`
   align-items: flex-end;
   justify-content: center;
-  margin: 0 0 30px;
+  margin-bottom: 30px;
 
   @media(max-width: 425px) {
     width: 100%;
+    order: 3;
+    margin-bottom: 0;
   }
 `;
 
@@ -57,7 +59,6 @@ const Right = styled(Left)`
   padding: 30px 0;
 
   @media(max-width: 425px) {
-    margin-bottom: 0;
     padding: 0;
   }
 `;
