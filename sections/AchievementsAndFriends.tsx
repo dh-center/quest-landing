@@ -10,12 +10,7 @@ const TextBlock = styled.div`
   display: inline-block;
   max-width: 496px;
 
-  margin-top: 135px;
   margin-right: auto;
-
-  @media(max-width: 425px) {
-    margin-top: 80px;
-  }
 `;
 
 const StyledTitle = styled(Title)`
@@ -30,56 +25,54 @@ const DescriptionParagraph = styled.p`
 `;
 
 const PhoneWrapper = styled.div`
-  margin-top: 135px;
   position: relative;
+  width: 560px;
+  height: 570px;
 
   @media(max-width: 425px) {
-    margin-top: 0;
     margin-bottom: 30px;
     height: 431px;
+    width: 100%;
   }
 `;
 
 const BlueCircle = styled.div`
-  width: 416px;
-  height: 416px;
+  width: 208px;
+  height: 208px;
   border-radius: 50%;
 
   background: #68C6DF;
   opacity: 0.2;
 
   position: absolute;
-  top: 104px;
-  left: 122px;
+  top: 62px;
 
   @media(max-width: 425px) {
-    width: 316px;
-    height: 316px;
+    width: 158px;
+    height: 158px;
 
-    top: 78px;
-    left: 10px;
+    top: 47px;
   }
 `;
 
 const YellowCircle = styled.div`
-  width: 208px;
-  height: 208px;
+  width: 416px;
+  height: 416px;
   border-radius: 50%;
 
   background: #F7E864;
   opacity: 0.2;
 
   position: absolute;
-  top: 67px;
-  left: 352px;
+  top: 104px;
+  left: 22px;
 
   @media(max-width: 425px) {
-    width: 152px;
-    height: 152px;
+    width: 315px;
+    height: 315px;
 
-    top: 50px;
-    right: 0;
-    left: auto;
+    top: 79px;
+    left: 17px;
   }
 `;
 
@@ -87,7 +80,7 @@ const Phone = styled.img`
   width: 269px;
 
   position: absolute;
-  left: 196px;
+  left: 96px;
 
   filter: var(--shadow-filter-medium);
 
@@ -102,13 +95,13 @@ const LeftBlock = styled.img`
   width: 260px;
 
   position: absolute;
-  top: 105px;
+  top: 290px;
   filter: var(--shadow-filter-large);
 
   @media(max-width: 425px) {
     width: 222px;
 
-    top: 79px;
+    top: 303px;
   }
 `;
 
@@ -116,16 +109,14 @@ const RightBlock = styled.img`
   width: 260px;
 
   position: absolute;
-  top: 265px;
-  left: 360px;
+  top: 102px;
+  right: 0;
   filter: var(--shadow-filter-large);
 
   @media(max-width: 425px) {
     width: 222px;
 
-    top: 201px;
-    right: 0;
-    left: auto;
+    top: 155px;
   }
 `;
 
