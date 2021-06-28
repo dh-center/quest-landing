@@ -11,10 +11,8 @@ const PhoneWrapper = styled.div`
   width: 620px;
   height: 570px;
 
-  @media(max-width: 425px) {
-    margin-top: 0;
-    margin-bottom: 30px;
-
+  @media (max-width: 425px) {
+    margin: 0 0 30px;
     height: 431px;
     width: 100%;
   }
@@ -32,7 +30,7 @@ const BlueCircle = styled.div`
   top: 104px;
   left: 122px;
 
-  @media(max-width: 425px) {
+  @media (max-width: 425px) {
     width: 316px;
     height: 316px;
 
@@ -53,7 +51,7 @@ const YellowCircle = styled.div`
   top: 67px;
   left: 352px;
 
-  @media(max-width: 425px) {
+  @media (max-width: 425px) {
     width: 152px;
     height: 152px;
 
@@ -71,7 +69,7 @@ const Phone = styled.img`
 
   filter: var(--shadow-filter-medium);
 
-  @media(max-width: 425px) {
+  @media (max-width: 425px) {
     width: 202px;
     left: 50%;
     transform: translateX(-50%);
@@ -85,7 +83,7 @@ const LeftBlock = styled.img`
   top: 105px;
   filter: var(--shadow-filter-large);
 
-  @media(max-width: 425px) {
+  @media (max-width: 425px) {
     width: 222px;
 
     top: 79px;
@@ -100,7 +98,7 @@ const RightBlock = styled.img`
   left: 360px;
   filter: var(--shadow-filter-large);
 
-  @media(max-width: 425px) {
+  @media (max-width: 425px) {
     width: 222px;
 
     top: 201px;
@@ -117,7 +115,7 @@ const TextBlock = styled.div`
   margin-left: auto;
   margin-bottom: 135px;
 
-  @media(max-width: 425px) {
+  @media (max-width: 425px) {
     margin-top: 80px;
     margin-bottom: 90px;
   }
@@ -142,7 +140,7 @@ export default function QuestsAndQuizzes(): ReactElement {
     <Section>
       <Container>
         {
-          !breakpoints.isXs &&
+          breakpoints.isXs === false &&
           <PhoneWrapper>
             <BlueCircle/>
             <YellowCircle/>
@@ -169,7 +167,8 @@ export default function QuestsAndQuizzes(): ReactElement {
             </PhoneWrapper>
           }
           <DescriptionParagraph>
-            В  наших квестах ты сможешь попробовать себя в роли сыщика, прожить один день вместе с любимым литературным персонажем или попытаться пройти по исторически опасному району и не попасть в неприятности.
+            В наших квестах ты сможешь попробовать себя в роли сыщика, прожить один день вместе с любимым литературным
+            персонажем или попытаться пройти по исторически опасному району и не попасть в неприятности.
           </DescriptionParagraph>
           <DescriptionParagraph>
             Закрепляй новые знания и проверяй себя с помощью квизов, чтобы получить награды за правильные ответы.

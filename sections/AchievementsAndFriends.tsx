@@ -29,7 +29,7 @@ const PhoneWrapper = styled.div`
   width: 560px;
   height: 570px;
 
-  @media(max-width: 425px) {
+  @media (max-width: 425px) {
     margin-bottom: 30px;
     height: 431px;
     width: 100%;
@@ -47,7 +47,7 @@ const BlueCircle = styled.div`
   position: absolute;
   top: 62px;
 
-  @media(max-width: 425px) {
+  @media (max-width: 425px) {
     width: 158px;
     height: 158px;
 
@@ -67,7 +67,7 @@ const YellowCircle = styled.div`
   top: 104px;
   left: 22px;
 
-  @media(max-width: 425px) {
+  @media (max-width: 425px) {
     width: 315px;
     height: 315px;
 
@@ -84,7 +84,7 @@ const Phone = styled.img`
 
   filter: var(--shadow-filter-medium);
 
-  @media(max-width: 425px) {
+  @media (max-width: 425px) {
     width: 202px;
     left: 50%;
     transform: translateX(-50%);
@@ -98,7 +98,7 @@ const LeftBlock = styled.img`
   top: 290px;
   filter: var(--shadow-filter-large);
 
-  @media(max-width: 425px) {
+  @media (max-width: 425px) {
     width: 222px;
 
     top: 303px;
@@ -113,7 +113,7 @@ const RightBlock = styled.img`
   right: 0;
   filter: var(--shadow-filter-large);
 
-  @media(max-width: 425px) {
+  @media (max-width: 425px) {
     width: 222px;
 
     top: 155px;
@@ -134,7 +134,8 @@ export default function AchievementsAndFriends(): ReactElement {
             Достижения и друзья
           </StyledTitle>
           <DescriptionParagraph>
-            Гуляй по Петербургу с нашим приложением и накапливай очки опыта. Выполняя задания, можно получать достижения и открывать премиальный контент.
+            Гуляй по Петербургу с нашим приложением и накапливай очки опыта. Выполняя задания, можно получать достижения
+            и открывать премиальный контент.
           </DescriptionParagraph>
           {
             breakpoints.isXs &&
@@ -147,12 +148,13 @@ export default function AchievementsAndFriends(): ReactElement {
             </PhoneWrapper>
           }
           <DescriptionParagraph>
-            Вместе веселее! Приглашай друзей в приложение, чтобы проходить квесты вместе, следить за их прогрессом и хвастаться своими ачивками.
+            Вместе веселее! Приглашай друзей в приложение, чтобы проходить квесты вместе, следить за их прогрессом и
+            хвастаться своими ачивками.
           </DescriptionParagraph>
           <Button href='https://github.com/dh-center/quest'>Скачать</Button>
         </TextBlock>
         {
-          !breakpoints.isXs &&
+          breakpoints.isXs === false &&
           <PhoneWrapper>
             <BlueCircle/>
             <YellowCircle/>
