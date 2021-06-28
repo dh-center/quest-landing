@@ -9,6 +9,7 @@ const ShadowVariables = createGlobalStyle`
 
     --shadow-filter-light: drop-shadow(0 16px 24px rgba(65, 67, 102, 0.08)) drop-shadow(0 2px 6px rgba(65, 67, 102, 0.07)) drop-shadow(0 0 1px rgba(65, 67, 102, 0.07));
     --shadow-filter-medium: drop-shadow(0 10px 20px rgba(65, 67, 102, 0.07)) drop-shadow(0 2px 6px rgba(65, 67, 102, 0.07)) drop-shadow(0 0 1px rgba(65, 67, 102, 0.07));
+    --shadow-filter-large: drop-shadow(0 10px 20px rgba(65, 67, 102, 0.07)) drop-shadow(0 2px 6px rgba(65, 67, 102, 0.07)) drop-shadow(0 0 1px rgba(65, 67, 102, 0.07));
   }
 `;
 
