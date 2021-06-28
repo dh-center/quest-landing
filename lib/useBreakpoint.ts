@@ -21,7 +21,7 @@ const getDeviceConfig = (width: number): MediaConfig => {
 };
 
 const useBreakpoint = (): MediaConfig => {
-  const [brkPnt, setBrkPnt] = useState(() => getDeviceConfig(window.innerWidth));
+  const [brkPnt, setBrkPnt] = useState(() => process.browser ? getDeviceConfig(window.innerWidth) : {});
 
   useEffect(() => {
     const calcInnerWidth = throttle(function () {

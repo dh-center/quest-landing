@@ -105,7 +105,6 @@ const RightBlock = styled.img`
   }
 `;
 
-
 const TextBlock = styled.div`
   display: inline-block;
   width: 460px;
