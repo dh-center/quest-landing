@@ -8,11 +8,15 @@ import useBreakpoint from '../lib/useBreakpoint';
 const PhoneWrapper = styled.div`
   margin-top: 135px;
   position: relative;
+  width: 620px;
+  height: 570px;
 
   @media(max-width: 425px) {
     margin-top: 0;
     margin-bottom: 30px;
+
     height: 431px;
+    width: 100%;
   }
 `;
 
