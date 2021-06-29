@@ -4,7 +4,6 @@ import Section from '../components/lib/Section';
 import Title from '../components/lib/Title';
 import Button from '../components/lib/Button';
 import Container from '../components/lib/Container';
-import useBreakpoint from '../lib/useBreakpoint';
 
 const TextBlock = styled.div`
   display: inline-block;
@@ -22,6 +21,22 @@ const DescriptionParagraph = styled.p`
 
   margin-top: 0;
   margin-bottom: 1em;
+`;
+
+const PhoneWrapperLarge = styled.div`
+  display: block;
+
+  @media (max-width: 425px) {
+    display: none;
+  }
+`;
+
+const PhoneWrapperMobile = styled.div`
+  display: none;
+
+  @media (max-width: 425px) {
+    display: block;
+  }
 `;
 
 const PhoneWrapper = styled.div`
@@ -124,8 +139,6 @@ const RightBlock = styled.img`
  * Achievements and friend section component
  */
 export default function AchievementsAndFriends(): ReactElement {
-  const breakpoints = useBreakpoint();
-
   return (
     <Section>
       <Container>
@@ -137,8 +150,7 @@ export default function AchievementsAndFriends(): ReactElement {
             Гуляй по Петербургу с нашим приложением и накапливай очки опыта. Выполняя задания, можно получать достижения
             и открывать премиальный контент.
           </DescriptionParagraph>
-          {
-            breakpoints.isXs &&
+          <PhoneWrapperMobile>
             <PhoneWrapper>
               <BlueCircle/>
               <YellowCircle/>
@@ -146,15 +158,14 @@ export default function AchievementsAndFriends(): ReactElement {
               <LeftBlock src='/images/screenshots/account/achievements.png'/>
               <RightBlock src='/images/screenshots/account/friends.png'/>
             </PhoneWrapper>
-          }
+          </PhoneWrapperMobile>
           <DescriptionParagraph>
             Вместе веселее! Приглашай друзей в приложение, чтобы проходить квесты вместе, следить за их прогрессом и
             хвастаться своими ачивками.
           </DescriptionParagraph>
           <Button href='https://github.com/dh-center/quest'>Скачать</Button>
         </TextBlock>
-        {
-          breakpoints.isXs === false &&
+        <PhoneWrapperLarge>
           <PhoneWrapper>
             <BlueCircle/>
             <YellowCircle/>
@@ -162,7 +173,7 @@ export default function AchievementsAndFriends(): ReactElement {
             <LeftBlock src='/images/screenshots/account/achievements.png'/>
             <RightBlock src='/images/screenshots/account/friends.png'/>
           </PhoneWrapper>
-        }
+        </PhoneWrapperLarge>
       </Container>
     </Section>
   );

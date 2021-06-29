@@ -3,7 +3,22 @@ import styled from 'styled-components';
 import Section from '../components/lib/Section';
 import Title from '../components/lib/Title';
 import Container from '../components/lib/Container';
-import useBreakpoint from '../lib/useBreakpoint';
+
+const PhoneWrapperLarge = styled.div`
+  display: block;
+
+  @media (max-width: 425px) {
+    display: none;
+  }
+`;
+
+const PhoneWrapperMobile = styled.div`
+  display: none;
+
+  @media (max-width: 425px) {
+    display: block;
+  }
+`;
 
 const PhoneWrapper = styled.div`
   margin-top: 135px;
@@ -134,13 +149,10 @@ const DescriptionParagraph = styled.p`
  * Quests and quizzes section component
  */
 export default function QuestsAndQuizzes(): ReactElement {
-  const breakpoints = useBreakpoint();
-
   return (
     <Section>
       <Container>
-        {
-          breakpoints.isXs === false &&
+        <PhoneWrapperLarge>
           <PhoneWrapper>
             <BlueCircle/>
             <YellowCircle/>
@@ -148,7 +160,7 @@ export default function QuestsAndQuizzes(): ReactElement {
             <LeftBlock src='/images/screenshots/quest-passing/left.png'/>
             <RightBlock src='/images/screenshots/quest-passing/right.png'/>
           </PhoneWrapper>
-        }
+        </PhoneWrapperLarge>
         <TextBlock>
           <StyledTitle>
             Квесты и квизы
@@ -156,8 +168,7 @@ export default function QuestsAndQuizzes(): ReactElement {
           <DescriptionParagraph>
             Проходя квесты и выполняя квизы, можно не только узнать много нового, но и проверить свою эрудицию.
           </DescriptionParagraph>
-          {
-            breakpoints.isXs &&
+          <PhoneWrapperMobile>
             <PhoneWrapper>
               <BlueCircle/>
               <YellowCircle/>
@@ -165,7 +176,7 @@ export default function QuestsAndQuizzes(): ReactElement {
               <LeftBlock src='/images/screenshots/quest-passing/left.png'/>
               <RightBlock src='/images/screenshots/quest-passing/right.png'/>
             </PhoneWrapper>
-          }
+          </PhoneWrapperMobile>
           <DescriptionParagraph>
             В наших квестах ты сможешь попробовать себя в роли сыщика, прожить один день вместе с любимым литературным
             персонажем или попытаться пройти по исторически опасному району и не попасть в неприятности.
