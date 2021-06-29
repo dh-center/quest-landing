@@ -46,16 +46,18 @@ const PersonCardsWrapper = styled.ul`
   animation: ${fromLeftToRight} 25s ease-in-out infinite;
 `;
 
-const PersonCard = styled.li`
+const PersonCardWrapper = styled.li`
   flex-shrink: 0;
+  filter: var(--shadow-filter-light);
+  margin-right: 40px;
+`;
+
+const PersonCard = styled.div`
   width: 168px;
 
   background: var(--color-white);
   border-radius: 15px;
   border: 0.2px solid #E0E0E0;
-  filter: var(--shadow-filter-light);
-
-  margin-right: 40px;
 
   overflow: hidden;
 
@@ -160,10 +162,12 @@ export default function PersonCards(): ReactElement {
 
   const personCards = persons.map((person, index) => {
     return (
-      <PersonCard key={index}>
-        <CardImage src={`/images/persons/${person.photo}`}/>
-        <CardName>{person.firstName}<br/>{person.lastName}</CardName>
-      </PersonCard>
+      <PersonCardWrapper key={index}>
+        <PersonCard>
+          <CardImage src={`/images/persons/${person.photo}`}/>
+          <CardName>{person.firstName}<br/>{person.lastName}</CardName>
+        </PersonCard>
+      </PersonCardWrapper>
     );
   });
 
