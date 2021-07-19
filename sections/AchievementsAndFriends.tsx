@@ -163,7 +163,7 @@ export default function AchievementsAndFriends(): ReactElement {
             Вместе веселее! Приглашай друзей в приложение, чтобы проходить квесты вместе, следить за их прогрессом и
             хвастаться своими ачивками.
           </DescriptionParagraph>
-          <Button href='https://github.com/dh-center/quest'>Скачать</Button>
+          <Button href='#download'>Скачать</Button>
         </TextBlock>
         <PhoneWrapperLarge>
           <PhoneWrapper>

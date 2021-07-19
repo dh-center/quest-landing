@@ -70,7 +70,7 @@ export default function Main(props: MainProps): ReactElement {
           <Description>
             Интерактивные культурные маршруты по Санкт-Петербургу с игровыми элементами
           </Description>
-          <Button href='https://github.com/dh-center/quest'>Скачать</Button>
+          <Button href='#download'>Скачать</Button>
         </TextBlock>
         <Phone src='/images/screenshots/quest-catalog.png' alt='Скриншот раздела «Каталог квестов»'/>
       </Container>

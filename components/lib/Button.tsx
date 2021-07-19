@@ -37,7 +37,7 @@ interface ButtonProps extends WithChildren {
  */
 export default function Button(props: ButtonProps): ReactElement {
   return (
-    <Wrapper href={props.href} target='_blank'>
+    <Wrapper href={props.href}>
       { props.children }
     </Wrapper>
   );

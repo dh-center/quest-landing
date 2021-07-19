@@ -59,8 +59,12 @@ export default function Download(props: DownloadProps): ReactElement {
     <StyledSectionGray id={props.id}>
       <StyledTitle>Скачать приложение</StyledTitle>
       <DownloadButtonsWrapper>
-        <img src="/images/app-store-badge.svg" alt="Загрузите в App Store"/>
-        <img src="/images/google-play-badge.svg" alt="Доступно в Google Play"/>
+        <a href="https://apps.apple.com/ru/app/que-st-%D0%BA%D0%B2%D0%B5%D1%81%D1%82%D1%8B-%D0%BF%D0%BE-%D0%BF%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%D1%83/id1566612304" target="_blank" rel="noreferrer">
+          <img src="/images/app-store-badge.svg" alt="Загрузите в App Store"/>
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=ru.dhcenter.quest" target="_blank" rel="noreferrer">
+          <img src="/images/google-play-badge.svg" alt="Доступно в Google Play"/>
+        </a>
       </DownloadButtonsWrapper>
     </StyledSectionGray>
   );
